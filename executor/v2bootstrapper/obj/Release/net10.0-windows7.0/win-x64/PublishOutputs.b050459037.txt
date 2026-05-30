@@ -1,0 +1,1 @@
+c:\Users\microslopbloatlover\Downloads\src\executor\v2bootstrapper\bin\Release\net10.0-windows7.0\win-x64\singlefile\v2bootstrapper.exe

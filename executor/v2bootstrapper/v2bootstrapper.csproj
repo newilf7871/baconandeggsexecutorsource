@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net10.0-windows7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<PublishSingleFile>true</PublishSingleFile>
+		<SelfContained>false</SelfContained>
+		<DebugType>embedded</DebugType>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+	</PropertyGroup>
+
+	<Target Name="PublishSingleFileAfterBuild" AfterTargets="Build">
+		<PropertyGroup>
+			<PublishSingleFileDir>$(TargetDir)singlefile</PublishSingleFileDir>
+		</PropertyGroup>
+		<RemoveDir Directories="$(PublishSingleFileDir)" />
+		<MakeDir Directories="$(PublishSingleFileDir)" />
+		<Exec Command="dotnet publish &quot;$(MSBuildProjectFullPath)&quot; -c $(Configuration) -r win-x64 --self-contained false --no-build -o &quot;$(PublishSingleFileDir)&quot;" />
+		<Message Text="Single-file bootstrapper: $(PublishSingleFileDir)\$(TargetName).exe" Importance="high" />
+	</Target>
+
+</Project>

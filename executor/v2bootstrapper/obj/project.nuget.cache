@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "LzD6x846Rzs=",
+  "success": true,
+  "projectFilePath": "c:\\Users\\microslopbloatlover\\Downloads\\src\\executor\\v2bootstrapper\\v2bootstrapper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\microslopbloatlover\\.nuget\\packages\\microsoft.net.illink.tasks\\10.0.7\\microsoft.net.illink.tasks.10.0.7.nupkg.sha512",
+    "C:\\Users\\microslopbloatlover\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\10.0.7\\microsoft.netcore.app.runtime.win-x64.10.0.7.nupkg.sha512",
+    "C:\\Users\\microslopbloatlover\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\10.0.7\\microsoft.windowsdesktop.app.runtime.win-x64.10.0.7.nupkg.sha512",
+    "C:\\Users\\microslopbloatlover\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\10.0.7\\microsoft.aspnetcore.app.runtime.win-x64.10.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}

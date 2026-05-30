@@ -1,0 +1,7 @@
+C:\Users\ilove\source\repos\v2executor\v2executor\bin\Release\net8.0-windows7.0\publish\v2executor.exe
+C:\Users\ilove\source\repos\v2executor\v2executor\bin\Release\net8.0-windows7.0\publish\v2executor.dll
+C:\Users\ilove\source\repos\v2executor\v2executor\bin\Release\net8.0-windows7.0\publish\v2executor.deps.json
+C:\Users\ilove\source\repos\v2executor\v2executor\bin\Release\net8.0-windows7.0\publish\v2executor.runtimeconfig.json
+C:\Users\ilove\source\repos\v2executor\v2executor\bin\Release\net8.0-windows7.0\publish\v2executor.pdb
+C:\Users\ilove\source\repos\v2executor\v2executor\bin\Release\net8.0-windows7.0\publish\Newtonsoft.Json.dll
+C:\Users\ilove\source\repos\v2executor\v2executor\bin\Release\net8.0-windows7.0\publish\XenoUI.dll
