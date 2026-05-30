@@ -1496,61 +1496,6 @@ namespace v2executor
                 {
                     _isAttached = true;
                     UpdateStatus("attached");
-                    _ = Task.Run(async () =>
-                    {
-                        await Task.Delay(500);
-                        try
-                        {
-                            string notifyScript = @"
-                                task.spawn(function()
-                                    local p = game:GetService('Players')
-                                    local lp = p.LocalPlayer
-                                    local start = tick()
-                                    while not lp and tick() - start < 10 do
-                                        task.wait(0.2)
-                                        lp = p.LocalPlayer
-                                    end
-                                    if not lp then return end
-                                    local pg = lp:WaitForChild('PlayerGui', 10)
-                                    if not pg then return end
-                                    local sg = Instance.new('ScreenGui')
-                                    sg.Name = 'BaconNotification'
-                                    sg.ResetOnSpawn = false
-                                    local s, cg = pcall(function() return game:GetService('CoreGui') end)
-                                    sg.Parent = (s and cg) or pg
-                                    local f = Instance.new('Frame')
-                                    f.Size = UDim2.new(0, 200, 0, 45)
-                                    f.Position = UDim2.new(1, -20, 1, -20)
-                                    f.AnchorPoint = Vector2.new(1, 1)
-                                    f.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-                                    f.BackgroundTransparency = 0.2
-                                    f.BorderSizePixel = 0
-                                    f.Parent = sg
-                                    local c = Instance.new('UICorner')
-                                    c.CornerRadius = UDim.new(0, 8)
-                                    c.Parent = f
-                                    local l = Instance.new('TextLabel')
-                                    l.Size = UDim2.new(1, 0, 1, 0)
-                                    l.BackgroundTransparency = 1
-                                    l.Text = 'bacon and eggs attached!'
-                                    l.TextColor3 = Color3.new(1, 1, 1)
-                                    l.Font = Enum.Font.GothamBold
-                                    l.TextSize = 14
-                                    l.Parent = f
-                                    task.delay(20, function()
-                                        local ts = game:GetService('TweenService')
-                                        local ti = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out)
-                                        ts:Create(f, ti, {BackgroundTransparency = 1}):Play()
-                                        ts:Create(l, ti, {TextTransparency = 1}):Play()
-                                        task.wait(1)
-                                        sg:Destroy()
-                                    end)
-                                end)
-                            ";
-                            execute(Encoding.UTF8.GetBytes(notifyScript + "\0"));
-                        }
-                        catch { }
-                    });
                     RunAutoExec();
                 }
                 else
