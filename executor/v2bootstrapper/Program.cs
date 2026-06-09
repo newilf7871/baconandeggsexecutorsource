@@ -1,3 +1,6 @@
+// © BNE Softworks (github.com/newilf7871)
+// chrome webview tabs from https://github.com/adamschwartz/chrome-tabs credit to him
+// licensed under GNU GPLv3 (see LICENSE)
 namespace v2bootstrapper
 {
     internal static class Program
