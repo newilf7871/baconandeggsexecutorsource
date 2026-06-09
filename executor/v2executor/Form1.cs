@@ -1,3 +1,6 @@
+// © BNE Softworks (github.com/newilf7871)
+// chrome webview tabs from https://github.com/adamschwartz/chrome-tabs credit to him
+// licensed under GNU GPLv3 (see LICENSE)
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
